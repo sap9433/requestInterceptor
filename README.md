@@ -43,4 +43,8 @@ It's a requestInterceptor for angularJs application . It shows a loading icon wh
     });
   })
 ```
-2. **Remove hard coded Parts from the above code**. Code above has some assumptions i.e. all your API urls include the term `/api/` . If this doesn't hold true replace the string in line `url.indexOf('/api/')` with `url.indexOf('aCommonTermThats presentInAllYourAPIURL')` . Also don't forget to change the `yourAppNAME` in the 1st line with your application's name
+
+2. **Remove hard coded Parts from the above code**. Code above has some assumptions i.e. all your API urls include the term `/api/` . If this doesn't hold true replace the string in line `url.indexOf('/api/')` with `url.indexOf('aCommonTermThats presentInAllYourAPIURL')` . Also don't forget to change the `yourAppNAME` in the 1st line with your application's name.
+
+3. **HTML && CSS Code for Loading div and Icon** .  
+
