@@ -46,5 +46,23 @@ It's a requestInterceptor for angularJs application . It shows a loading icon wh
 
 2. **Remove hard coded Parts from the above code**. Code above has some assumptions i.e. all your API urls include the term `/api/` . If this doesn't hold true replace the string in line `url.indexOf('/api/')` with `url.indexOf('aCommonTermThats presentInAllYourAPIURL')` . Also don't forget to change the `yourAppNAME` in the 1st line with your application's name.
 
-3. **HTML && CSS Code for Loading div and Icon** .  
+3. **HTML  Code for Loading div ** .  
+4. **HTML  Code for Error Modal (Using bootstrap modal)**
+```
+ <div id="j-serverError" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Error</h4>
+        </div>
+        <div class="modal-body">
+          <p>{{serverError}}</p>
+        </div>
+      </div>
+    </div>
+ </div>
+```
+
+
 
