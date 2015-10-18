@@ -7,7 +7,7 @@ It's a request Interceptor for angularJs application . It shows a loading icon w
 - To show error modal we are using BootStrap modal.
 
 ###### Code and instruction.
-1.  **Include following file in your angularJs project** and include that file in index.html . *Instead of* creating a new file you can also add the config block to your `app.js` file i.e. only `.config(function($httpProvider){ ...})` part.  
+1)  **Include following file in your angularJs project** and include that file in index.html . *Instead of* creating a new file you can also add the config block to your `app.js` file i.e. only `.config(function($httpProvider){ ...})` part.  
 
 ```
   angular.module('yourAppNAME').config(function($httpProvider) {
@@ -45,10 +45,12 @@ It's a request Interceptor for angularJs application . It shows a loading icon w
   })
 ```
 
-2. **Remove hard coded Parts from the above code**. Code above has some assumptions i.e. all your API urls include the term `/api/` . If this doesn't hold true replace the string in line `url.indexOf('/api/')` with `url.indexOf('aCommonTermThats presentInAllYourAPIURL')` . Also don't forget to change the `yourAppNAME` in the 1st line with your application's name.
+2)  **Remove hard coded Parts from the above code**
 
-3. **HTML  Code for Loading div**
+Code above has some assumptions i.e. all your API urls include the term `/api/` . If this doesn't hold true replace the string in line `url.indexOf('/api/')` with `url.indexOf('aCommonTermThats presentInAllYourAPIURL')` . Also don't forget to change the `yourAppNAME` in the 1st line with your application's name.
 
+
+3)   **HTML  Code for Loading div**
 
 If size of loader in action array is > 0 that means some ajax req are pending and hence show loader.
 ```
@@ -57,7 +59,8 @@ If size of loader in action array is > 0 that means some ajax req are pending an
  </div>
 ```
 
-4. **HTML  Code for Error Modal (Using bootstrap modal)**
+4)   **HTML  Code for Error Modal (Using bootstrap modal)**
+
 ```
  <div id="j-serverError" class="modal fade" aria-hidden="true">
     <div class="modal-dialog">
@@ -74,5 +77,6 @@ If size of loader in action array is > 0 that means some ajax req are pending an
  </div>
 ```
 
+Now you have a global handler for pending request and a global error handler as well . That's it . Thank you :) 
 
 
